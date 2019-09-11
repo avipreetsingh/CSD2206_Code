@@ -1,0 +1,1 @@
+INSERT INTO students ( studentid, studentlastname, studentfirstname ) VALUES ( 'A101', 'Smith', 'John');
