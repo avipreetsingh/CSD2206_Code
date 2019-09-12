@@ -19,3 +19,13 @@ CREATE TABLE students(
 	studentgroup VARCHAR (20),
        PRIMARY KEY (studentid) 
 );
+
+CREATE TABLE pgmgroups( 
+       programgroupid   VARCHAR (20) NOT NULL, 
+       programgroupname VARCHAR (20), 
+       classid VARCHAR (20), 
+	   sectionid VARCHAR (20)
+       PRIMARY KEY (programgroupid) 
+);
+
+
