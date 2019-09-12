@@ -10,3 +10,14 @@ INSERT INTO students ( studentid, studentlastname, studentfirstname, programgrou
 INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A110', 'Pike', 'Christopher', 'Group 3');
 INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A111', 'Scott', 'Montgommery', 'Group 3');
 INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A112', 'Riker', 'William', 'Group 3');
+
+
+CREATE TABLE students( 
+       studentid   VARCHAR (20) NOT NULL, 
+       studentlastname VARCHAR (20), 
+       studentfirstname VARCHAR (20), 
+	   group VARCHAR (20)
+       PRIMARY KEY (studentid) 
+); 
+
+
