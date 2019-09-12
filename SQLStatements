@@ -33,3 +33,17 @@ USE CESVERSION2;
 GO
 EXEC sp_rename 'students.studentgroup' , 'programgroup';
 GO
+
+
+How to subtract the COUNTS of 2 Tables
+DECLARE @ThisYearCount BIGINT,
+        @LastYearCount BIGINT,
+        @Difference  BIGINT
+
+SELECT @ThisYearCount = COUNT(*) FROM ThisYear
+
+SELECT @LastYearCount = COUNT(*) FROM LastYear
+
+SET @Difference = @ThisYearCount - @LastYearCount
+
+Print @Difference
