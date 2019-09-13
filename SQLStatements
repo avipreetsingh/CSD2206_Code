@@ -29,6 +29,13 @@ coursename VARCHAR (20) NOT NULL
 PRIMARY KEY (classid)
 );
 
+CREATE TABLE programgroup(
+pgid VARCHAR (20) NOT NULL,
+programgroupname VARCHAR(20) NOT NULL,
+sectionnumber VARCHAR (20) NOT NULL,
+classid VARCHAR (20) NOT NULL
+PRIMARY KEY (pgid)
+);
 
 How to rename a COLUMN
 USE CESVERSION2;
