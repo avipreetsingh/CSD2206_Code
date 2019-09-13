@@ -65,11 +65,14 @@ ALTER TABLE Customers
 DROP COLUMN ContactName;
 
 
-Combining Real Estate Data with Community Info Table
-select this.Description, this.Type, this.bedroom 
+create view CombinedData as 
+
+select this.Description, this.Type, this.bedroom , c.communityname, c.communitydata
 
 from ThisYear as this, communityinfo as c 
 
 where [sold price] < 600000 
 
-and this.Community = communityinfo.communityname
+and this.Community = c.communityname;
+
+select * from CombinedData as cv where cv.bedroom  >3
