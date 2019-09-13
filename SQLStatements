@@ -1,15 +1,16 @@
-INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A101', 'Smith', 'John', 'Group 1');
-INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A102', 'Jones', 'Mike', 'Group 1');
-INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A103', 'Smith', 'Susan', 'Group 1');
-INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A104', 'Bichon', 'Peanut', 'Group 1');
-INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A105', 'Smith', 'John', 'Group 1');
-INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A106', 'Kirk', 'James', 'Group 2');
-INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A107', 'Archer', 'Jonathan', 'Group 2');
-INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A108', 'Janeway', 'Catherine', 'Group 2');
-INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A109', 'Sisko', 'Benjamin', 'Group 2');
-INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A110', 'Pike', 'Christopher', 'Group 3');
-INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A111', 'Scott', 'Montgommery', 'Group 3');
-INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroup ) VALUES ( 'A112', 'Riker', 'William', 'Group 3');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroupname ) VALUES ( 'A101', 'Smith', 'John', 'CPCT');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroupname ) VALUES ( 'A102', 'Jones', 'Mike', 'CPCT');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroupname ) VALUES ( 'A103', 'Smith', 'Susan', 'CPCT');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroupname ) VALUES ( 'A104', 'Bichon', 'Peanut', 'CPCT');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroupname ) VALUES ( 'A105', 'Smith', 'John', 'CPCT');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroupname ) VALUES ( 'A106', 'Kirk', 'James', 'CPCT');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroupname ) VALUES ( 'A107', 'Archer', 'Jonathan', 'CPCT');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroupname ) VALUES ( 'A108', 'Janeway', 'Catherine', 'CPCT');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroupname ) VALUES ( 'A109', 'Sisko', 'Benjamin', 'CPCT');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroupname ) VALUES ( 'A110', 'Pike', 'Christopher', 'CPCT');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroupname ) VALUES ( 'A111', 'Scott', 'Montgommery', 'CPCT');
+INSERT INTO students ( studentid, studentlastname, studentfirstname, programgroupname ) VALUES ( 'A112', 'Riker', 'William', 'CPCT');
+
 
 How to create the students table with DDL:
 CREATE TABLE students(
@@ -56,3 +57,9 @@ SELECT @LastYearCount = COUNT(*) FROM LastYear
 SET @Difference = @ThisYearCount - @LastYearCount
 
 Print @Difference
+
+
+How to delete a Column from a Table:
+
+ALTER TABLE Customers
+DROP COLUMN ContactName;
