@@ -63,3 +63,13 @@ How to delete a Column from a Table:
 
 ALTER TABLE Customers
 DROP COLUMN ContactName;
+
+
+Combining Real Estate Data with Community Info Table
+select this.Description, this.Type, this.bedroom 
+
+from ThisYear as this, communityinfo as c 
+
+where [sold price] < 600000 
+
+and this.Community = communityinfo.communityname
