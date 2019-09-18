@@ -76,3 +76,16 @@ where [sold price] < 600000
 and this.Community = c.communityname;
 
 select * from CombinedData as cv where cv.bedroom  >3
+
+
+WEEK 3 Code:
+
+Farmer Joe Exercise:
+
+CREATE TABLE veggies (
+    veggie_id varchar(20),
+    cost money,
+    veggie_name varchar(20),
+    quantity int
+    PRIMARY KEY (veggie_id)
+);
