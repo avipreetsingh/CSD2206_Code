@@ -89,3 +89,10 @@ CREATE TABLE veggies (
     quantity int
     PRIMARY KEY (veggie_id)
 );
+
+CREATE TABLE lot (
+    lot_id varchar(20),
+    veggie_id varchar(20),
+    lot_name varchar(20),
+    PRIMARY KEY (lot_id)
+);
