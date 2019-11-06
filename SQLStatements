@@ -146,4 +146,40 @@ where SoldDate >= '2019/9/1'
 
 
 
+-- what is average selling price of houses??
+
+select avg ( [Sold price] ) from Bramptondata;
+
+
+
+select b.type, 
+ avg ( [Sold price] ) from Bramptondata as b
+group by b.type
+order by avg( [Sold price] ) desc;
+
+
+
+select b.Description, 
+ avg ( [Sold price] ) from Bramptondata as b
+group by b.Description
+order by avg( [Sold price] ) desc;
+
+
+select b.Bedroom, 
+ avg ( [Sold price] ) from Bramptondata as b
+group by b.Bedroom
+order by avg( [Sold price] ) desc;
+
+
+-- break  this out by  type , description , bedrooms
+
+select b.Bedroom,b.Description,b.type,  
+ avg ( [Sold price] ) from Bramptondata as b
+group by b.Bedroom,Description,type
+order by avg( [Sold price] ) desc;
+
+
+
+
+
 select * from Pickeringdata
