@@ -126,7 +126,24 @@ FROM   INFORMATION_SCHEMA.COLUMNS;
 
 *****************************************
 
-use  AdventureWorks2012;
+select * from Bramptondata
+--where SoldDate < '2019/9/1'
+order by soldDate desc;
+
+
 select * from Bramptondata
 where SoldDate < '2019/9/1'
 order by soldDate desc;
+
+select COUNT(*) from Bramptondata
+where SoldDate < '2019/9/1'
+
+select COUNT(*) from Bramptondata
+where SoldDate > '2019/9/1'
+
+select COUNT(*) from Bramptondata
+where SoldDate >= '2019/9/1'
+
+
+
+select * from Pickeringdata
