@@ -179,6 +179,22 @@ group by b.Bedroom,Description,type
 order by avg( [Sold price] ) desc;
 
 
+select avg(Bedroom) as bedroom,Description,type,  
+ avg ( [Sold price] ) from Bramptondata
+group by Bedroom,Description,type
+order by avg( [Sold price] ) desc;
+
+select  avg(Bedroom) as avgbedroom,b.Description,count(Description) as cdescription ,b.type, count(type) as ctype,  
+ avg ( [Sold price] ) from Bramptondata as b
+group by b.Bedroom,Description,type
+order by avg( [Sold price] ) desc;
+
+select month(soldDate) as sDate,   
+ avg ( [Sold price] ) as soldprice, Type, Bedroom from Bramptondata 
+group by Bedroom,Description,type,SoldDate
+order by avg( [Sold price] ) desc;
+
+
 
 
 
