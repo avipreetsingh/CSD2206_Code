@@ -1,0 +1,73 @@
+select * from Bramptondata
+--where SoldDate < '2019/9/1'
+order by soldDate desc;
+
+
+select * from Bramptondata
+where SoldDate < '2019/9/1'
+order by soldDate desc;
+
+select COUNT(*) from Bramptondata
+where SoldDate < '2019/9/1'
+
+select COUNT(*) from Bramptondata
+where SoldDate > '2019/9/1'
+
+select COUNT(*) from Bramptondata
+where SoldDate >= '2019/9/1'
+
+
+
+-- what is average selling price of houses??
+
+select avg ( [Sold price] ) from Bramptondata;
+
+
+
+select b.type, 
+ avg ( [Sold price] ) from Bramptondata as b
+group by b.type
+order by avg( [Sold price] ) desc;
+
+
+
+select b.Description, 
+ avg ( [Sold price] ) from Bramptondata as b
+group by b.Description
+order by avg( [Sold price] ) desc;
+
+
+select b.Bedroom, 
+ avg ( [Sold price] ) from Bramptondata as b
+group by b.Bedroom
+order by avg( [Sold price] ) desc;
+
+
+-- break  this out by  type , description , bedrooms
+
+select b.Bedroom,b.Description,b.type,  
+ avg ( [Sold price] ) from Bramptondata as b
+group by b.Bedroom,Description,type
+order by avg( [Sold price] ) desc;
+
+
+select avg(Bedroom) as bedroom,Description,type,  
+ avg ( [Sold price] ) from Bramptondata
+group by Bedroom,Description,type
+order by avg( [Sold price] ) desc;
+
+select  avg(Bedroom) as avgbedroom,b.Description,count(Description) as cdescription ,b.type, count(type) as ctype,  
+ avg ( [Sold price] ) from Bramptondata as b
+group by b.Bedroom,Description,type
+order by avg( [Sold price] ) desc;
+
+select month(soldDate) as sDate,   
+ avg ( [Sold price] ) as soldprice, Type, Bedroom from Bramptondata 
+group by Bedroom,Description,type,SoldDate
+order by avg( [Sold price] ) desc;
+
+
+
+
+
+select * from Pickeringdata
