@@ -122,3 +122,11 @@ How to print out all fields in ALL Tables in a Database:
        NUMERIC_SCALE ,
        DATETIME_PRECISION
 FROM   INFORMATION_SCHEMA.COLUMNS;
+
+
+*****************************************
+
+
+select * from Bramptondata
+where SoldDate < '2019/9/1'
+order by soldDate desc;
