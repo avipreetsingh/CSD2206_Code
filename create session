@@ -3555,3 +3555,34 @@ right join tblEmployee as e
 on e.EmployeeNumber = t.EmployeeNumber;
 
 
+select * from tblTransaction as t
+right join tblEmployee as e
+on e.EmployeeNumber = t.EmployeeNumber
+where EmployeeLastName LIKE 'Y%'-- %a%, %a%a%
+
+
+select count(*) from tblTransaction as t
+right join tblEmployee as e
+on e.EmployeeNumber = t.EmployeeNumber
+where EmployeeLastName  LIKE 'Y%'-- %a%, %a%a%
+
+
+select * from tblTransaction as t
+right join tblEmployee as e
+on e.EmployeeNumber = t.EmployeeNumber
+where EmployeeLastName not LIKE 'Y%'-- %a%, %a%a%
+
+
+select count(*) from tblTransaction as t
+right join tblEmployee as e
+on e.EmployeeNumber = t.EmployeeNumber
+where EmployeeLastName not LIKE 'Y%'-- %a%, %a%a%
+
+
+select count(*), EmployeeLastName from tblTransaction as t
+right join tblEmployee as e
+on e.EmployeeNumber = t.EmployeeNumber
+where EmployeeLastName LIKE 'Y%'-- %a%, %a%a%
+group by EmployeeLastName
+
+
