@@ -3538,3 +3538,20 @@ select * from tblEmployee
 select * from tblDepartment
 
 select * from tblTransaction
+
+
+select * from tblTransaction as t
+inner join tblEmployee as e
+on e.EmployeeNumber = t.EmployeeNumber;
+
+
+select * from tblTransaction as t
+left join tblEmployee as e
+on e.EmployeeNumber = t.EmployeeNumber;
+
+
+select * from tblTransaction as t
+right join tblEmployee as e
+on e.EmployeeNumber = t.EmployeeNumber;
+
+
