@@ -3586,3 +3586,14 @@ where EmployeeLastName LIKE 'Y%'-- %a%, %a%a%
 group by EmployeeLastName
 
 
+select * from tblTransaction as t
+where EmployeeNumber in(126, 127, 128, 128)
+order by EmployeeNumber
+
+
+select * from tblTransaction as t
+where EmployeeNumber in(126, 127, 128, 128)
+and  year(DateofTransaction) = 2015
+order by EmployeeNumber
+
+
