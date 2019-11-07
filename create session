@@ -3597,3 +3597,39 @@ and  year(DateofTransaction) = 2015
 order by EmployeeNumber
 
 
+
+select * from tblTransaction as t
+where EmployeeNumber in
+    ( select EmployeeNumber FROM tblEmployee WHERE EmployeeLastName LIKE 'Y%')
+order by EmployeeNumber
+
+
+select * from tblTransaction as t
+where EmployeeNumber in
+    ( select EmployeeNumber FROM tblEmployee WHERE EmployeeLastName not LIKE 'Y%')
+order by EmployeeNumber   
+                         -- inner join
+                          
+
+
+select * from tblTransaction as t
+where EmployeeNumber not in 
+    ( select EmployeeNumber FROM tblEmployee WHERE EmployeeLastName  LIKE 'Y%')
+order by EmployeeNumber  
+                        -- left join
+
+
+select * from tblTransaction as t
+where EmployeeNumber = any
+    ( select EmployeeNumber FROM tblEmployee WHERE EmployeeLastName  LIKE 'Y%')
+order by EmployeeNumber 
+
+
+select * from tblTransaction as t
+where EmployeeNumber = some
+    ( select EmployeeNumber FROM tblEmployee WHERE EmployeeLastName  LIKE 'Y%')
+order by EmployeeNumber
+
+
+
+
