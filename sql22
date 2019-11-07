@@ -67,6 +67,29 @@ group by Bedroom,Description,type,SoldDate
 order by avg( [Sold price] ) desc;
 
 
+select community,type, Description,bedroom, avg([sold price]) as avgsoldprice  from Bramptondata
+where Bedroom between 2 and 3
+ group by community,type,description,Bedroom
+ order by avg([sold price]) desc;
+
+-- produce a report on average sales price grouped by community 2 and 3 bedrooms properties
+
+select bedroom, avg([sold price]) as avgsoldprice from Bramptondata
+where Bedroom between 2 and 3
+group by Bedroom
+order by avg([sold price]) desc;
+
+select community,type, Description,bedroom,soldDate, avg([sold price]) as avgsoldprice  from Bramptondata
+--where Bedroom between 2 and 3
+where month(soldDate) = 10
+ group by community,type,description,Bedroom,SoldDate
+ order by avg([sold price]) desc;
+
+select community,type, Description,bedroom,soldDate,count(soldDate) as countsoldDATE, avg([sold price]) as avgsoldprice  from Bramptondata
+--where Bedroom between 2 and 3
+where month(soldDate) between 9 and 10
+ group by community,type,description,Bedroom,SoldDate
+ order by avg([sold price]) desc , soldDate asc;
 
 
 
